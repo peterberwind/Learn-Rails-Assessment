@@ -1,6 +1,6 @@
 ::selection {
-  background: #F8E71C;
-  color: $black;
+  background: $dark-gray;
+  color: $white;
 }
 body {
   @include font-feature-settings("kern", "liga", "pnum");

@@ -1,0 +1,31 @@
+#bootstrap-overrides {
+  .label {
+    padding: 1em;
+
+    &-success {
+      background-color: #fff!important;
+      border: 1px solid #5cb85c;
+      color: #5cb85c;
+    }
+
+    &-warning {
+      background-color: #fff!important;
+      border: 1px solid #f0ad4e;
+      color: #f0ad4e;
+    }
+
+    &-danger {
+      background-color: #fff!important;
+      border: 1px solid #d9534f;
+      color: #d9534f;
+    }
+
+  }
+
+  table > tbody > tr > td {
+    padding: 20px 8px!important;
+    font-size: 1em;
+  }
+
+
+}

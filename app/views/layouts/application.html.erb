@@ -8,7 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="hold-transition skin-black fixed sidebar-mini">
+  <body id="bootstrap-overrides" class="hold-transition skin-black fixed sidebar-mini">
   <div class="wrapper">
 
     <%= render "shared/header" %>
@@ -19,13 +19,17 @@
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
       <section class="content-header">
-        <h1>Dashboard
-          <small>Control panel</small>
+        <h1 class="title">Projects
+          <!-- <small>Control panel</small> -->
         </h1>
-        <ol class="breadcrumb">
-          <li><a href="#"></i> Home</a></li>
-          <li class="active">Dashboard</li>
-        </ol>
+        <!-- <ol class="breadcrumb">
+          <li><a href="#"></i>Home</a></li>
+          <li class="active">Projects</li>
+        </ol> -->
+        <div class="actions">
+          <a href="#" class="btn btn-primary">Create New Proposal</a>
+        </div>
+
       </section>
 
       <!-- Main content -->

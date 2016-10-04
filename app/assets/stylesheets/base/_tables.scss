@@ -14,11 +14,17 @@ th {
 }
 
 td {
-  padding: $small-spacing 0;
+  padding: 20px;
 }
 
 tr,
 td,
 th {
   vertical-align: middle;
+}
+
+// override bootstrap
+table > tbody > tr > td {
+  padding: 20px!important;
+  font-size: 1em;
 }

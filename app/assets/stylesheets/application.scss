@@ -11,10 +11,15 @@
  * It is generally better to create a new file per style scope.
  *
  *= require font-awesome
- *= require_tree .
  *= require_self
  */
+@import "bourbon";
+@import "neat";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "AdminLTE.css";
 @import "skin-black.css";
+
+@import "base/base";
+
+@import "admin/layout";

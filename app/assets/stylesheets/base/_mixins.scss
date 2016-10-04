@@ -1,0 +1,65 @@
+// BEM Mixins
+@mixin e($element) {
+  &__#{$element} {
+    @content
+  }
+}
+
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content
+  }
+}
+
+@mixin is($modifier) {
+  &.is-#{$modifier} {
+    @content
+  }
+}
+
+@mixin js($name) {
+  &.js-#{$name} {
+    @content
+  }
+}
+
+@mixin sectionheight() {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin float-cols($cols, $total) {
+  float: left;
+  width: percentage($cols / $total);
+}
+
+// Align Mixin without using Flexbox
+// Sometimes is needed
+// Requires parent element to have position relative
+@mixin align($direction: both) {
+  position: absolute;
+  transform-style: preserve-3d;
+
+  @if index("horizontal" "h", $direction) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @else if index("vertical" "v", $direction) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @else {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+ }
+
+ // Omega Reset
+ // This mixin assumes you are designing mobile-first using min-width media queries.
+ // http://www.joshfry.me/blog/2013/05/13/omega-reset-for-bourbon-neat
+
+ @mixin omega-reset($nth) {
+   &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+   &:nth-child(#{$nth}+1) { clear: none }
+ }

@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-xs-12">
+    <div class="box">
+      <div class="box-body table-responsive no-padding">
+        <table class="table table-hover">
+          <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Client</th>
+            <th>Created On</th>
+            <th>Status</th>
+          </tr>
+
+          <% @proposals.each do |proposal|  %>
+            <tr>
+              <td><%= proposal.id %></td>
+              <td><%= proposal.title %></td>
+              <td><%= proposal.created_at %></td>
+              <td><%= proposal.status %></td>
+              <td><span class="label label-warning"><%= proposal.id %></span></td>
+            </tr>
+          <% end %>
+        </table>
+
+        <% if @proposals.empty? %>
+          <div class="empty">
+            <h1>No Proposals Added Yet</h1>
+          </div>
+        <% end %>
+      </div>
+      <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+  </div>
+</div>

@@ -22,3 +22,56 @@ Confirm:
 - [ ] Limited logic in controllers
 - [ ] Views use helper methods if appropriate
 - [ ] Views use partials if appropriate
+
+
+Data Model:
+
+Relations:
+
+- Users (has_many :projects, has_may :clients)
+- Clients (belongs_to :user, has_many :projects)
+  - Projects (belongs_to: client, has_many :proposals)
+    - Proposals (belongs_to :project, has_many: sections, has_one :pricing_table)
+      - Sections (belongs_to :proposal)
+      - Pricing Table (belongs_to :proposal, has_many: item_groups)
+        - Item Groups (belongs_to :pricing table, has_many: line_items)
+        - Line Items (belongs_to :item_group)
+
+Attributes:
+
+Client:
+- Company Name
+- Contact Name
+- Email
+
+Projects:
+- Title
+- Status
+- ClientID
+
+Proposals:
+- Title
+- Tagline
+- Date
+- Status
+- ProjectID
+
+Sections:
+- Title
+- Body
+- ProposalID
+
+Pricing Tabel:
+- Title
+- ProposalID
+- Discount
+- #total
+
+ItemGroup:
+- Title
+- PricingTableID
+- #subtotal
+
+LineItem:
+- Title
+- Price

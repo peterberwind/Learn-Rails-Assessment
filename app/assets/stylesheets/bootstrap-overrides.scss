@@ -20,6 +20,37 @@
       color: #d9534f;
     }
 
+    &-active {
+      background-color: #fff!important;
+      border: 1px solid green;
+      color: green;
+    }
+
+    &-draft {
+      background-color: #fff!important;
+      border: 1px solid grey;
+      color: grey;
+    }
+
+    &-pending {
+      background-color: #fff!important;
+      border: 1px solid orange;
+      color: orange;
+    }
+
+    &-rejected {
+      background-color: #fff!important;
+      border: 1px solid red;
+      color: red;
+    }
+
+    &-ended {
+      background-color: red!important;
+      color: #fff;
+    }
+
+
+
   }
 
   table > tbody > tr > td {

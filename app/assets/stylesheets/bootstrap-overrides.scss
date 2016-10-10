@@ -26,6 +26,11 @@
       color: green;
     }
 
+    &-accepted {
+      background-color: green!important;
+      color: #fff;
+    }
+
     &-draft {
       background-color: #fff!important;
       border: 1px solid grey;

@@ -25,7 +25,7 @@
                 <td><%= proposal.title %></td>
                 <td><%= proposal.created_at %></td>
                 <td><span class="label label-warning"><%= proposal.status %></span></td>
-                <td><%= link_to "Edit", edit_proposal_path(proposal) %></td>
+                <td><%= link_to "View", proposal_path(proposal) %> / <%= link_to "Edit", edit_proposal_path(proposal) %></td>
               </tr>
             <% end %>
           </table>

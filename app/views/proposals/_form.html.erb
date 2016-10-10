@@ -1,5 +1,6 @@
-<%= form_for @proposal do |f| %>
-  <%= f.text_field :title, class: "form-control" %>
-  <%= f.text_field :status, class: "form-control" %>
-  <%= f.submit %>
+<%= simple_form_for @proposal do |f| %>
+  <%= f.input :title %>
+  <%= f.input :tagline %>
+  <%= f.input :status %>
+  <%= f.button :submit %>
 <% end %>

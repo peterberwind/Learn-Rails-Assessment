@@ -4,19 +4,29 @@ class ProposalsController < ApplicationController
     @proposals = Proposal.all
   end
 
+  def show
+    @proposal = Proposal.find(params[:id])
+  end
+
   def new
     @proposal = Proposal.new
   end
 
   def create
-    @proposal = Proposal.create(proposal_params)
-    redirect_to proposals_path
+    @proposal = Proposal.new(proposal_params)
+    if @proposal.save
+      flash[:success] = "Proposal was saved!"
+      redirect_to @proposal
+    else
+      flash[:error] = "There was an error!"
+      render action: "new"
+    end
   end
 
   private
 
   def proposal_params
-    params.require(:proposal).permit(:title, :status)
+    params.require(:proposal).permit(:title, :tagline, :status)
   end
 
 end

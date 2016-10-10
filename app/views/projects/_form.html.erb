@@ -1,5 +1,6 @@
 <%= simple_form_for @project do |f| %>
   <%= f.input :title %>
   <%= f.input :status, collection: ["Pending", "Active", "Ended"], prompt: "Choose a Status" %>
+  <%= f.association :client, collection: Client.order(:name), prompt: "Choose a Client" %>
   <%= f.button :submit %>
 <% end %>

@@ -2,5 +2,6 @@
   <%= f.input :title %>
   <%= f.input :tagline %>
   <%= f.input :status %>
+  <%= f.association :project, collection: Project.order(:title), prompt: "Choose a Project" %>
   <%= f.button :submit %>
 <% end %>

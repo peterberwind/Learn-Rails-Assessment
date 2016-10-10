@@ -23,6 +23,21 @@ class ProposalsController < ApplicationController
     end
   end
 
+  def edit
+    @proposal = Proposal.find(params[:id])
+  end
+
+  def update
+    @proposal = Proposal.find(params[:id])
+    if @proposal.update_attributes(proposal_params)
+      flash[:success] = "Proposal was updated!"
+      redirect_to @proposal
+    else
+      flash[:error] = "There was an error!"
+      render action: "edit"
+    end
+  end
+
   private
 
   def proposal_params

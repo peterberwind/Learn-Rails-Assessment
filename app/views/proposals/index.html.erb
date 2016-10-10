@@ -20,12 +20,12 @@
               <th>Status</th>
             </tr>
             <% @proposals.each do |proposal|  %>
-              <tr data-href= "<%= show_proposal_path(proposal) %>">
+              <tr>
                 <td><%= proposal.id %></td>
                 <td><%= proposal.title %></td>
                 <td><%= proposal.created_at %></td>
-                <td><%= proposal.status %></td>
-                <td><span class="label label-warning"><%= proposal.id %></span></td>
+                <td><span class="label label-warning"><%= proposal.status %></span></td>
+                <td><%= link_to "Edit", edit_proposal_path(proposal) %></td>
               </tr>
             <% end %>
           </table>

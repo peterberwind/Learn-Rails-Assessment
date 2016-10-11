@@ -4,5 +4,8 @@
     <h1><%= @proposal.tagline %></h1>
     <h1><%= @proposal.status %></h1>
     <h1><%= @proposal.project_id %></h1>
+    <%= link_to "Edit", edit_proposal_path(proposal) %>
+    <%= link_to "Back to Index", proposals_path %>
+
   </div>
 </div>

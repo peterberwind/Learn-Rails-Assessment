@@ -13,6 +13,7 @@
  *= require font-awesome
  *= require_self
  */
+// Base + Libraries
 @import "bourbon";
 @import "neat";
 @import "bootstrap-sprockets";
@@ -21,6 +22,10 @@
 @import "skin-black.css";
 @import "bootstrap-overrides";
 
+// Adimin
 @import "base/base";
 @import "admin/layout";
 @import "admin/table";
+
+// Home
+@import "home";

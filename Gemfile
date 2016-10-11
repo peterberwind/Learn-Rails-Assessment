@@ -34,6 +34,10 @@ gem 'neat'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem "font-awesome-rails"
 gem 'simple_form'
+gem 'devise'
+gem 'devise-bootstrap-views'
+gem "high_voltage"
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -47,6 +51,10 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem "guard", ">= 2.2.2", :require => false
+  gem "guard-livereload",  :require => false
+  gem "rack-livereload"
+  gem "rb-fsevent",        :require => false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

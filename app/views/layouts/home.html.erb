@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LearnRailsAssessment</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body id="bootstrap-overrides" class="hold-transition skin-black fixed sidebar-mini layout-home">
+  <div class="wrapper">
+
+    <%= render "shared/header" %>
+    <!-- Left side column. contains the logo and sidebar -->
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <div class="container">
+          <%= yield %>
+      </div>
+    </div>
+
+    <%= render "shared/footer" %>
+
+  </div>
+  <!-- ./wrapper -->
+  </body>
+  </html>

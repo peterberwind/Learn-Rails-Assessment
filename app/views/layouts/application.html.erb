@@ -20,7 +20,11 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-      <%= yield %>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 panel">
+          <%= yield %>
+        </div>
+      </div>
       <%= debug(params) if Rails.env.development? %>
     </div>
 

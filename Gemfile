@@ -33,6 +33,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem "font-awesome-rails"
+gem 'bootstrap-tagsinput-rails'
 gem 'simple_form'
 gem 'devise'
 gem 'devise-bootstrap-views'

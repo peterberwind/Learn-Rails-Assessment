@@ -15,5 +15,6 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require chart
+//= require bootstrap-tagsinput
 //= require adminLTE
 //= require_tree .

@@ -4,8 +4,12 @@
     padding-top: 49px;
 
     .main-content {
-      padding: 25px;
+      padding: 40px;
     }
+  }
+
+  .tab-content {
+    padding-top: 20px;
   }
 
   .alert {
@@ -22,6 +26,10 @@
     &-notice {
       color: #fff;
       background-color: green;
+    }
+
+    &-success {
+      color: #fff
     }
   }
 

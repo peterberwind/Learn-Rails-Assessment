@@ -18,13 +18,14 @@
               <th>Client</th>
               <th>Created On</th>
               <th>Status</th>
+              <th>Actions</th>
             </tr>
             <% @projects.each do |project|  %>
               <tr>
                 <td><%= project.id %></td>
                 <td><%= project.title %></td>
                 <td>Client Name</td>
-                <td><%= project.created_at %></td>
+                <td><%= project.created_at.to_time.strftime('%B %e %Y') %></td>
                 <td><span class="label label-<%= project.status.downcase %>"><%= project.status %></span></td>
                 <td><%= link_to "View", project_path(project) %> / <%= link_to "Edit", edit_project_path(project) %></td>
               </tr>

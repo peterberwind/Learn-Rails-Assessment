@@ -18,12 +18,13 @@
               <th>Client</th>
               <th>Created On</th>
               <th>Status</th>
+              <th>Actions</th>
             </tr>
             <% @proposals.each do |proposal|  %>
               <tr>
                 <td><%= proposal.id %></td>
                 <td><%= proposal.title %></td>
-                <td><%= proposal.created_at %></td>
+                <td><%= proposal.created_at.to_time.strftime('%B %e %Y') %></td>
                 <td><span class="label label-<%= proposal.status.downcase %>"><%= proposal.status %></span></td>
                 <td><%= link_to "View", proposal_path(proposal) %> / <%= link_to "Edit", edit_proposal_path(proposal) %></td>
               </tr>

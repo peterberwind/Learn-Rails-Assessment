@@ -1,7 +1,7 @@
 #bootstrap-overrides {
 
   .content-wrapper {
-    margin-top: 50px;
+    padding-top: 49px;
 
     .main-content {
       padding: 25px;
@@ -10,10 +10,19 @@
 
   .alert {
     padding: 11px;
-    margin-bottom: 20px;
     border: 1px solid transparent;
     border-radius: 0px;
-    margin-top: 50px;
+    margin-bottom: 0;
+
+    &-alert {
+      color: #fff;
+      background-color: orange;
+    }
+
+    &-notice {
+      color: #fff;
+      background-color: green;
+    }
   }
 
   .label {

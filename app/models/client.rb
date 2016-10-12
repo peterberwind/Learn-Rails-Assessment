@@ -1,5 +1,7 @@
 class Client < ApplicationRecord
   has_many :projects
+  has_many :proposals, through: :projects
+  belongs_to :user
 
   validates :name, :presence => true
   validates :email, :presence => true

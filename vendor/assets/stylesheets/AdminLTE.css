@@ -118,7 +118,7 @@ body {
 }
 .fixed .content-wrapper,
 .fixed .right-side {
-  padding-top: 70px;
+  /*padding-top: 70px;*/
 }
 @media (max-width: 767px) {
   .fixed .content-wrapper,
@@ -2383,7 +2383,7 @@ a:focus {
  * ----------------
  */
 .alert {
-  border-radius: 3px;
+  border-radius: 0;
 }
 .alert h4 {
   font-weight: 600;

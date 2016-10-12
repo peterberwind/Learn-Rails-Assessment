@@ -8,7 +8,7 @@ $(function () {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
       {
-        label: "Electronics",
+        label: "Projects",
         fillColor: "rgba(210, 214, 222, 1)",
         strokeColor: "rgba(210, 214, 222, 1)",
         pointColor: "rgba(210, 214, 222, 1)",
@@ -18,7 +18,7 @@ $(function () {
         data: [65, 59, 80, 81, 56, 55, 40]
       },
       {
-        label: "Digital Goods",
+        label: "Proposals",
         fillColor: "rgba(60,141,188,0.9)",
         strokeColor: "rgba(60,141,188,0.8)",
         pointColor: "#3b8bba",

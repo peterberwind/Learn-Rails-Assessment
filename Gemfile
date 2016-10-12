@@ -36,6 +36,7 @@ gem "font-awesome-rails"
 gem 'bootstrap-tagsinput-rails'
 gem 'simple_form'
 gem 'devise'
+gem 'omniauth-facebook'
 gem 'devise-bootstrap-views'
 gem "high_voltage"
 

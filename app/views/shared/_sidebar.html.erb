@@ -6,6 +6,11 @@
     <ul class="sidebar-menu">
       <li class="header">MAIN NAVIGATION</li>
       <li class="treeview">
+        <%= link_to dashboard_main_path do %>
+          <i class="fa fa-dashboard"></i><span>Dashboard</span>
+        <% end %>
+      </li>
+      <li class="treeview">
         <%= link_to projects_path do %>
           <i class="fa fa-dashboard"></i><span>Projects</span>
         <% end %>

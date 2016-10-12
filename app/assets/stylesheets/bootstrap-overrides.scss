@@ -2,9 +2,13 @@
 
   .content-wrapper {
     padding-top: 49px;
+    height: 100%;
 
     .main-content {
       padding: 40px;
+    }
+    .content {
+      padding: 20px 0;
     }
   }
 

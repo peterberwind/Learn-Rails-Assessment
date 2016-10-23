@@ -39,6 +39,10 @@ class ClientsController < ApplicationController
     end
   end
 
+  def self.most_recent_proposals
+    self.proposals
+  end
+
   private
 
   def client_params

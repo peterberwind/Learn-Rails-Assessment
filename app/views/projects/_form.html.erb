@@ -2,5 +2,10 @@
   <%= f.input :title %>
   <%= f.input :status, collection: ["Pending", "Active", "Ended"], prompt: "Choose a Status" %>
   <%= f.association :client, collection: Client.order(:name), prompt: "Choose a Client" %>
+  <h1>Add A Proposal</h1>
+  <%= f.simple_fields_for :proposals do |p| %>
+    <%= p.input :title %>
+    <%= p.input :status, collection: ["Pending", "Active", "Ended"], prompt: "Choose a Status" %>
+  <% end %>
   <%= f.button :submit %>
 <% end %>

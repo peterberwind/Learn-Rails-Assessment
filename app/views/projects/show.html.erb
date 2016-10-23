@@ -6,3 +6,16 @@
     <%= link_to "Back to Index", projects_path %>
   </div>
 </div>
+
+<div class="box box-primary">
+  <div class="box-body">
+    <% if @project.proposals.any? %>
+      <% @project.proposals.each do |proposal|  %>
+        <%= proposal.title %>
+        <%= proposal.status %>
+      <% end %>
+    <% else %>
+      <h1>This project doesnt have any proposals yet!</h1>
+    <% end %>
+  </div>
+</div>

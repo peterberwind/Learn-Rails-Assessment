@@ -43,7 +43,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :tagline, :status, :client_id, proposal_attributes: [:title, :status])
+    params.require(:project).permit(:title, :tagline, :status, :client_id, proposals_attributes: [:title, :status])
   end
 
 end

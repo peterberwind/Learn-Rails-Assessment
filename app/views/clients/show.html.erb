@@ -9,6 +9,7 @@
   </div>
 </div>
 
+<!-- Client Projects -->
 <section class="content">
   <div class="row">
     <div class="col-xs-12">
@@ -18,7 +19,7 @@
           <h3 class="box-title">Most Recent Proposals</h3>
         </div>
         <div class="box-body">
-          <%= @client.proposals do |proposal| %>
+          <% @client.proposals do |proposal| %>
            <%= proposal.title %>
           <% end %>
         </div>

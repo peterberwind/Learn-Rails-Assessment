@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'dashboard/main'
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :clients
+
   resources :projects do
     resources :proposals
   end

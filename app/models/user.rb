@@ -6,7 +6,6 @@ class User < ApplicationRecord
   devise :omniauthable, :omniauth_providers => [:facebook]
 
   has_many :clients
-  has_many :projects, through: :clients
 
   # method for login with facebook
   def self.from_omniauth(auth)

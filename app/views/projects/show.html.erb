@@ -10,12 +10,14 @@
 <div class="box box-primary">
   <div class="box-body">
     <% if @project.proposals.any? %>
+    <ul>
       <% @project.proposals.each do |proposal|  %>
-        <%= proposal.title %>
-        <%= proposal.status %>
+        <li><%= link_to "#{proposal.title} - #{proposal.status}", project_proposal_path(@project, proposal)%></li>
       <% end %>
+    </ul>
     <% else %>
       <h1>This project doesnt have any proposals yet!</h1>
     <% end %>
+    <%= link_to "Create New Proposal", new_project_proposal_path(@project, @proposal) %>
   </div>
 </div>

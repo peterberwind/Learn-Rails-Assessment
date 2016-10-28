@@ -1,7 +1,7 @@
-<%= simple_form_for @proposal do |f| %>
+<%= simple_form_for [@project, @proposal] do |f| %>
+  <%= f.error_notification %>
   <%= f.input :title %>
   <%= f.input :tagline %>
   <%= f.input :status, collection: ["Draft", "Pending", "Accepted", "Rejected"], prompt: "Choose a Status" %>
-  <%= f.association :project, collection: Project.order(:title), prompt: "Choose a Project" %>
   <%= f.button :submit %>
 <% end %>

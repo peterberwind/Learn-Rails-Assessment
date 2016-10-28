@@ -2,22 +2,26 @@ class ProposalsController < ApplicationController
   # before_action :authenticate_user!
 
   def index
-    @proposals = Proposal.all
+    @project = Project.find(params[:project_id])
+    @proposals = @project.proposals
   end
 
   def show
-    @proposal = Proposal.find(params[:id])
+    @project = Project.find(params[:project_id])
+    @proposal = @project.proposals.find(params[:id])
   end
 
   def new
-    @proposal = Proposal.new
+    @project = Project.find(params[:project_id])
+    @proposal = @project.proposals.build
   end
 
   def create
-    @proposal = Proposal.new(proposal_params)
+    @project = Project.find(params[:project_id])
+    @proposal = @project.proposals.new(proposal_params)
     if @proposal.save
       flash[:success] = "Proposal was saved!"
-      redirect_to @proposal
+      redirect_to @project, @proposal
     else
       flash[:error] = "There was an error!"
       render action: "new"
@@ -25,17 +29,31 @@ class ProposalsController < ApplicationController
   end
 
   def edit
-    @proposal = Proposal.find(params[:id])
+    @project = Project.find(params[:project_id])
+    @proposal = @project.proposals.find(params[:id])
   end
 
   def update
-    @proposal = Proposal.find(params[:id])
+    @project = Project.find(params[:project_id])
+    @proposal = @project.proposals.find(params[:id])
     if @proposal.update_attributes(proposal_params)
       flash[:success] = "Proposal was updated!"
-      redirect_to @proposal
+      redirect_to @project, @proposal
     else
       flash[:error] = "There was an error!"
       render action: "edit"
+    end
+  end
+
+  def destroy
+    @project = Project.find(params[:project_id])
+    @proposal = @project.proposals.find(params[:id])
+    if @proposal.destroy
+      flash[:warn] = "Proposal was Deleted!"
+      redirect_to @project
+    else
+      flash[:error] = "There was an error!"
+      render action: show
     end
   end
 

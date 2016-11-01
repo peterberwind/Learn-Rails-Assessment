@@ -8,5 +8,4 @@ class Client < ApplicationRecord
   validates_format_of :email, :with => /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
   validates_format_of :phone, with: /\A\d{3}-\d{3}-\d{4}\z/
 
-
 end
